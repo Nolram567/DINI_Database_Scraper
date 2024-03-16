@@ -67,7 +67,10 @@ if __name__ == '__main__':
 
     print(create_dict_from_content(content))
 
-    # Nun liegen die Daten in einer Form vor, mit der man verschiedene statistische Untersuchungen vornehmen kann.
+    # Nun liegen die Daten in einer Form vor, mit der man verschiedene statistische Untersuchungen vornehmen kann:
+    #{'Institut I': {'typenorm': 'Forschungsdaten', 'state': 'Nordrhein-Westfalen', 'platform': 'DSpace', 'count': '167'},
+    # 'Institut II': {'typenorm': 'E-Journal (Einzelzeitschrift)', 'state': 'Bayern', 'platform': 'OJS', 'count': '230'}, (...)}
+    
     data = create_dict_from_content(content)
 
     platform_counts = {}
