@@ -21,10 +21,10 @@ def scrape_data_and_extract_content() -> list or None:
         # Die Tabelleneinträge werden gespalten und in einer Liste gespeichert.
         split_entries = database.split('<td class="dini"')
 
-        # Der letzte Eintrag wird gelöscht, da er leer ist und danach geprüft, ob die Liste genau 540 Einträge umfasst
+        # Der letzte Eintrag wird gelöscht, da er leer ist und danach geprüft, ob die Liste genau 540 Einträge umfasst; veraltet, da sich die Menge der verzeichneten Dienste ständig ändert.
         split_entries = split_entries[:-1]
-        if not len(split_entries) == 540:
-            raise Warning("Es wurden nicht alle Einträge oder zu viele Einträge erfasst")
+        '''if not len(split_entries) == 540:
+            raise Warning("Es wurden nicht alle Einträge oder zu viele Einträge erfasst")'''
         return split_entries
 
 def create_dict_from_content(entries: list) -> dict:
