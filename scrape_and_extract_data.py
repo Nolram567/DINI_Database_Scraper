@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 def scrape_data_and_extract_content() -> list or None:
     """
     Scrapt den Content von der Webressource der DINI und löscht alle Daten vor und nach der Tabelle.
-    :return:
     """
     response = requests.get("https://dini.de/dienste-projekte/publikationsdienste")
 
@@ -30,8 +29,6 @@ def scrape_data_and_extract_content() -> list or None:
 def create_dict_from_content(entries: list) -> dict:
     """
     Bildet die HTML-Rohdaten auf ein Dictionary ab.
-    :param entries:
-    :return:
     """
     repository_data = {}
 
@@ -73,6 +70,7 @@ if __name__ == '__main__':
     
     data = create_dict_from_content(content)
 
+    # Eine beispielhafte Verwendung der Daten:
     platform_counts = {}
     for entry in data.values():
         platform = entry['platform']
